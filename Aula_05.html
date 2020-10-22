@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Urna.web</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div {
+ 	width: 300px;
+  	padding: 50px;
+  	border: 2px solid black;
+  	margin: 0;
+  	/*background-color: blue ;*/
+    padding: 20px;
+    margin: 200px auto;
+
+
+}
+	</style>
+</head>
+<body>
+	<center>
+		<div>
+	<form>
+		<b><p>Voto:</p></b>
+		17 == Bolsonaro<br>
+		13 == Adade<br>
+		10 == Não sei
+		<p><input type="text" id="a"></p>
+ 		<p><button onclick="im()">Enviar</button></p>
+	</form>
+		</div>
+	</center> 	
+<script type="text/javascript">
+function im(){
+var a = parseInt(document.getElementById('a').value);
+switch (a){
+	case 17:
+	document.write("<b>Bolsonaro!</b>");
+	break;
+	case 13:
+	document.write("<b>Adade!</b>");
+	break;
+	case 10:
+	document.write("<b>Não sei!</b>");
+	break;
+	default: document.write("Tá na disney")
+
+}
+};
+</script>
+
+</body>
+</html>

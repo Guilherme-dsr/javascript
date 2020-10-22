@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio_02_Calc</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div {
+ 	width: 1000px;
+  	padding: 50px;
+  	border: 2px solid black;
+  	margin: 0;
+    padding: 20px;
+    margin: 200px auto;}
+	</style>
+
+</head>
+<body>
+	<center>
+	<div>
+	<form>
+		<b> 1° Número: </b>
+		<input type="text" id="n1">
+		<b> Operação: </b>
+		<input type="text" id="op">
+		<b> 2° Número: </b>
+		<input type="text" id="n2">
+ 		<button onclick="cal()">Calcular</button>
+	</form>
+	</div>
+	</center>
+
+<script type="text/javascript">
+	function cal(){
+	var n1 = parseFloat(document.getElementById('n1').value);
+	var n2 = parseFloat(document.getElementById('n2').value);
+	var op = document.getElementById('op').value;
+
+	switch(true){
+		case (op == "+"):
+		document.write("<center> Soma: <font color='red'>"+(n1+n2)+"</font></center> ");
+		break;
+
+		case (op == "x"):
+		document.write("<center><br> Multiplição: <font color='red'>"+(n1*n2)+"</font></center>");
+		break;
+
+		case (op == "/"):
+		document.write("<center> <br> Divisão: <font color='red'>"+(n1/n2)+"</font></center>");
+		break;
+
+		case (op == "-"):
+		document.write("<center> <br> Subtração: <font color='red'>"+(n1-n2)+"</font></center> ");
+		break;
+	}}
+	
+</script>
+</body>
+</html>

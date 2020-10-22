@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clas_triangulo</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div {
+ 	width: 300px;
+  	padding: 50px;
+  	border: 2px solid black;
+  	margin: 0;
+  	/*background-color: blue ;*/
+    padding: 20px;
+    margin: 200px auto;
+
+
+}
+	</style>
+</head>
+<body>
+	<center>
+		<div>
+	<form>
+		<b><p>Lado 1:</p></b>
+		<p><input type="text" id="l1"></p>
+		<b><p>Lado 2:</p></b>
+		<p><input type="text" id="l2"></p>
+		<b><p>Lado 3:</p></b>
+		<p><input type="text" id="l3"></p>
+ 		<p><button onclick="t()">Enviar</button></p>
+	</form>
+		</div>
+	</center> 	
+<script type="text/javascript">
+function t(){
+
+var l1 = parseInt(document.getElementById('l1').value);
+var l2 = parseInt(document.getElementById('l2').value);
+var l3 = parseInt(document.getElementById('l3').value);
+
+if (l1 == l2 && l2 == l3) { 
+	document.write("<center>Triângulo equilátero!</center>");
+	 } 
+else if(l1 == l2 || l1 == l3 || l2 == l3){ 
+	document.write("<center>Triângulo isósceles!</center>"); 
+}
+else if(l1 != l2 && l2 != l3){ 
+	document.write("<center>Triângulo escaleno!</center>"); 
+}
+
+};
+</script>
+
+</body>
+</html>

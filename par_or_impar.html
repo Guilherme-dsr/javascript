@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Par || impar</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div {
+ 	width: 300px;
+  	padding: 50px;
+  	border: 2px solid black;
+  	margin: 0;
+  	/*background-color: blue ;*/
+    padding: 20px;
+    margin: 200px auto;
+
+
+}
+	</style>
+</head>
+<body>
+	<center>
+		<div>
+	<form>
+		<b><p>Numero:</p></b>
+		<p><input type="text" id="n"></p>
+ 		<p><button onclick="pa()">Enviar</button></p>
+	</form>
+		</div>
+	</center> 	
+<script type="text/javascript">
+function pa(){
+
+var n = parseInt(document.getElementById('n').value);
+var mod = n % 2;
+
+if (mod == 0) { 
+	document.write("<center>O numero é Par! "+n+"</center>");
+	 } 
+else{ 
+	document.write("<center>O numero é Impar! "+n+"</center>"); 
+}
+
+};
+</script>
+
+</body>
+</html>

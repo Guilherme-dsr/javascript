@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiplo de 3</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div {
+ 	width: 300px;
+  	padding: 50px;
+  	border: 2px solid black;
+  	margin: 0;
+  	/*background-color: blue ;*/
+    padding: 20px;
+    margin: 200px auto;
+
+
+}
+	</style>
+</head>
+<body>
+	<center>
+		<div>
+	<form>
+		<b><p>Número:</p></b>
+		<p><input type="text" id="n"></p>
+ 		<p><button onclick="t()">Enviar</button></p>
+	</form>
+		</div>
+	</center> 	
+<script type="text/javascript">
+function t(){
+
+var n = parseInt(document.getElementById('n').value);
+var mut = n % 3;
+if (mut == 0) { 
+	document.write("<center>O numero é Multiplo de 3!</center>");
+	 } 
+else{ 
+	document.write("<center>Não é multiplo de 3!</center>"); 
+}
+
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Consumo médio</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div {
+ 	width: 300px;
+  	padding: 50px;
+  	border: 2px solid black;
+  	margin: 0;
+    padding: 20px;
+    margin: 200px auto;}
+</style>
+
+</head>
+<body>
+	<center>
+		<h1>Consumo médio:</h1>
+		<div>
+	<form id="formulario">
+		<b><p>Km:</p></b>
+		<p><input type="text" id="km"></p>
+		<b><p>Litros de gasolina:</p></b>
+		<p><input type="text" id="l"></p>
+ 		<p><input type="submit" value="Enviar"></p>
+	</form>
+	</div>
+	</center> 	
+<script type="text/javascript">
+var form = document.getElementById('formulario');
+
+form.addEventListener('submit', function(e) {
+var km = parseFloat(document.getElementById('km').value);
+var l = parseFloat(document.getElementById('l').value);
+var med = km / l;
+document.write("<center><b>O consumo médio do seu carro é: </b><br>"+med+" km com litro</center>");
+
+e.preventDefault();
+});
+</script>
+
+</body>
+</html>

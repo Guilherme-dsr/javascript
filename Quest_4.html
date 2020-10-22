@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quest_4</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	var i, idade, peso, sexo, mediapesomulh, mediaidhom;
+	var quanthom = 0, quantmulh = 0, idadehom = 0, pesomulh = 0;
+
+ 	for(i = 1; i <= 3; i++) {
+ 		idade = parseInt(prompt("Sua idade["+i+"]:"));
+ 		peso = parseInt(prompt("Seu peso["+i+"]:"));
+ 		sexo = prompt("Sexo: M ou F:");
+
+ 		if(sexo == 'M' || sexo == 'm') {					
+ 			quanthom++;
+ 			idadehom += idade;
+ 		} if (sexo == 'F' || sexo == 'f') {
+ 			quantmulh++;
+ 			pesomulh += peso;
+ 		}
+ 	}
+ 	mediaidhom = idadehom/quanthom;
+ 	mediapesomulh = pesomulh/quantmulh;
+ 	document.write("<center>Total de homens: "+quanthom+"<br></center>");
+ 	document.write("<center>Total de mulheres: "+quantmulh+"<br></center>");
+ 	document.write("<center>Média das idades dos homens: "+mediaidhom+"<br></center>");
+ 	document.write("<center>Média dos pesos das mulheres: "+mediapesomulh+"<br></center>");
+</script>
+</body>
+</html>

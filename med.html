@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Media</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div {
+ 	width: 300px;
+  	padding: 50px;
+  	border: 2px solid black;
+  	margin: 0;
+    padding: 20px;
+    margin: 200px auto;}
+</style>
+
+</head>
+<body>
+	<center>
+		<h1>Média:</h1>
+		<div>
+	<form id="formulario">
+
+		<b><p>Nome:</p></b>
+		<p><input type="text" id="n"></p>
+		<b><p>Nota 1</p></b>
+		<p><input type="text" id="n1"></p>
+		<b><p>Nota 2</p></b>
+		<p><input type="text" id="n2"></p>
+		<b><p>Nota 3</p></b>
+		<p><input type="text" id="n3"><br></p>
+ 		<p><input type="submit" value="Enviar"></p>
+	</form>
+	</div>
+	</center> 	
+<script type="text/javascript">
+var form = document.getElementById('formulario');
+
+form.addEventListener('submit', function(e) {
+var n = document.getElementById('n').value;
+var n1 = parseFloat(document.getElementById('n1').value);
+var n2 = parseFloat(document.getElementById('n2').value);
+var n3 = parseFloat(document.getElementById('n3').value);
+var med = (n1+n2+n3)/3;
+document.write("nome: "+n+" Media: "+med);
+
+	if (med<=3) {
+    document.write(" muito critico ");}
+    else if((med > 3.1) && ( med < 5.9)){
+	document.write(" Critico ");}
+	else if((med > 6.0) && ( med < 7.9)){
+	document.write(" bom ");}
+	else if((med > 7.9) && ( med < 10)){
+	document.write(" muito bom ");}
+    e.preventDefault();
+
+});
+</script>
+</script>
+
+</body>
+</html>

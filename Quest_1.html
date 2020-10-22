@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quest_1</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	var i, alt, sexo;
+	var maioralt = 0, menoralt = 0, mulh = 0, hom = 0, mediamulh = 0, contamulh = 0, contahom = 0;
+
+		for(i = 1 ;i <= 3; i++) {		
+			alt = parseFloat(prompt("Digite sua altura["+i+"]:"));
+			sexo = prompt("Sexo: M ou F:");
+			
+			
+			if(i == 1) {
+				menoralt = alt;
+			} if(alt > maioralt) { 
+				maioralt = alt;
+			} if(alt < menoralt) { 
+				menoralt = alt;
+			} if(sexo == 'F' || sexo == 'f') {
+				mulh += alt;
+				contamulh++;
+			} else if(sexo == 'M' || sexo == 'm') {
+				hom += alt;
+				contahom++;
+			}
+		}
+		mediamulh = mulh/contamulh;
+		document.write("A maior altura é: "+maioralt+"<br>"); 
+		document.write("A menor altura é: "+menoralt+"<br>");
+		document.write("A média das mulheres é: "+mediamulh+"<br>");
+		document.write("O número de homens é: "+contahom);
+</script>
+</body>
+</html>

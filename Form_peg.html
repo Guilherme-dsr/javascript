@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form_peg</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<center>
+	<form id="formulario">
+		<p><input type="text" id="nome"></p>
+		<p><input type="number" id="ida"><br></p>
+		<p><input type="submit" value="Enviar"></p>
+	</form>
+	</center>
+
+<script type="text/javascript">
+var form = document.getElementById('formulario');
+var n1 = document.getElementById('nome');
+var n2 = document.getElementById('ida');
+
+form.addEventListener('submit', function(e) {
+
+    document.write("Seu nome é: "+nome.value+" <br>Sua idade é: "+ida.value);
+    e.preventDefault();
+});
+</script>
+
+</body>
+</html>

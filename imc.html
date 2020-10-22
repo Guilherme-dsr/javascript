@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IMC</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div {
+ 	width: 300px;
+  	padding: 50px;
+  	border: 2px solid black;
+  	margin: 0;
+  	/*background-color: blue ;*/
+    padding: 20px;
+    margin: 200px auto;
+
+
+}
+	</style>
+</head>
+<body>
+	<center>
+		<h1>IMC:</h1>
+		<div>
+	<form>
+		<b><p>Altura:</p></b>
+		<p><input type="text" id="a"></p>
+		<b><p>Peso:</p></b>
+		<p><input type="text" id="p"></p>
+ 		<p><button onclick="im()">Enviar</button></p>
+	</form>
+		</div>
+	</center> 	
+<script type="text/javascript">
+function im(){
+
+var a = parseFloat(prompt('a').value);
+var p = parseFloat(prompt('p').value);
+var imc = p/(a * a);
+
+if (imc < 18.5) {
+document.write("<center>Magreza!</center>");
+}
+else if ((imc > 18.5) && (imc < 24.9)) {
+document.write("<center>saudavel!</center>");
+}
+else if ((imc > 25.0) && (imc < 29.9)) {
+document.write("<center>Sobrepeso!</center>");
+}
+else if ((imc > 30.0) && (imc < 34.9)) {
+document.write("<center>Obeso! grau 1</center>");
+}
+else if ((imc > 35) && (imc < 39.9)) {
+document.write("<center>Obeso! grau 2 (Severa)</center>");
+}
+else if (imc >= 40) {
+document.write("<center>Obeso! grau 3 (morbida)</center>");
+}
+
+document.write("<center><b>IMC:</b><br>"+imc+"</center>");
+
+};
+</script>
+
+</body>
+</html>

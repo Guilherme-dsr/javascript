@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio_02_Calc</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div {
+ 	width: 300px;
+  	padding: 50px;
+  	border: 2px solid black;
+  	margin: 0;
+    padding: 20px;
+    margin: 200px auto;}
+	</style>
+
+</head>
+<body>
+	<center>
+	<div>
+	<form>
+		<b><p>Dia:</p></b>
+		<p><input type="number" id="d"></p>
+		<b><p>Mês:</p></b>
+		<p><input type="number" id="m"></p>
+		<b><p>Ano:</p></b>
+		<p><input type="number" id="a"></p>
+ 		<p><button onclick="cal()">Enviar</button></p>
+	</form>
+	</div>
+	</center>
+
+<script type="text/javascript">
+	function cal(){
+	var d = parseInt(document.getElementById('d').value);
+	var m = parseInt(document.getElementById('m').value);
+	var a = parseInt(document.getElementById('a').value);
+
+		switch(true){
+
+		case (m == 2):
+		if (d < 28){ 
+		document.write("<center>Data: "+(d+1)+" / "+m+" / "+a+"</center>");}
+		else{
+		document.write("<center>Data: "+"1"+" / "+(m+1)+" / "+a+"</center>");}
+		break;
+
+		case (m == 1 || m >= 3 && m <= 11):
+		if (d <= 29){ 
+		document.write("<center>Data: "+(d+1)+" / "+m+" / "+a+"</center>");}
+		else{
+		document.write("<center>Data: "+"1"+" / "+(m+1)+" / "+a+"</center>");}
+		break;
+
+		case (m == 12):
+		if (d <= 30){ 
+		document.write("<center>Data: "+(d+1)+" / "+m+" / "+a+"</center>");}
+		else{
+		document.write("<center>Data: "+"1"+" / "+"1"+" / "+(a+1)+"</center>");}
+		break;
+
+		default:document.write("ERRO!");
+	}
+ 
+
+	
+}
+	
+</script>
+</body>
+</html>

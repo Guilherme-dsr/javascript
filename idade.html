@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Idade</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div {
+ 	width: 300px;
+  	padding: 50px;
+  	border: 2px solid black;
+  	margin: 0;
+    padding: 20px;
+    margin: 200px auto;}
+</style>
+</head>
+<body>
+	<center>
+		<h1>Idade:</h1>
+	<div>
+	<form id="formulario">
+		<b><p>Nome:</p></b>
+		<p><input type="text" id="n"></p>
+		<b><p>Ano de nacimento:</p></b>
+		<p><input type="text" id="an"></p>
+ 		<p><input type="submit" value="Enviar"></p>
+	</form>
+	</div>
+	</center> 	
+<script type="text/javascript">
+var form = document.getElementById('formulario');
+var nom = document.getElementById('nome');
+
+form.addEventListener('submit', function(e) {
+var data = new Date();
+var anodn = parseFloat(document.getElementById('an').value);
+var ida =  data.getFullYear() - anodn;
+
+document.write("<center><b>Nome:</b><br>"+n.value+"<br><b>Idade:</b><br>"+ida+" Anos</center>");
+
+e.preventDefault();
+});
+</script>
+</script>
+
+</body>
+</html>
