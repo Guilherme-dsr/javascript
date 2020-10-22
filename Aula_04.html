@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aula_04</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<center>
+	<form>
+		<b><p>Nota 1</p></b>
+		<p><input type="text" id="n1"></p>
+		<button onclick="e()">enviar</button>
+	</form>
+	</center> 	
+<script type="text/javascript">
+function e() {
+var n1 = document.getElementById('n1').value;
+
+if (n1 == "guilherme") {
+	document.write("<font color='blue'>HOMEM</font>");
+}
+else if(n1 == "roney"){
+	document.write("<font color='blue'>HOMEM</font>");
+}
+else{
+	document.write("<font color='red'>Viado, vagabunda do sexo </font> "+n1);
+} 
+};
+</script>
+
+</body>
+</html>
